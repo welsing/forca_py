@@ -1,22 +1,18 @@
-## O pc vai sortear uma palavra e iniciar o jogo, a cada loop o usuario vai digitar uma letra ou um comando para sair
-## A cada iteração uma função vai verificar se o usuario já achou todas as letras 
-## e verificar se o usuario tem chances ainda para jogar.
-## Se as chances do usuario acabarem, o loop quebra e o usuario perde.
-## Se o usuario acertar todas as letras com um saldo positivo de chances de jogada, então o loop quebra e o usuario ganha.
+
 from random import randint
 from time import sleep
 import sys
 def gerar_Palavra(classe):
 	'''Randomiza uma palavra por classe selecionada. \n (int) -> str'''
 	animais = ['Abelha', 'Alce', 'Barata', 'Borboleta', 'Cachorro', 'Coelho', 'Elefante', 'Gato', 'Girafa', 'Hamster',
-               'Iguana', 'Jacaré', 'Leão', 'Macaco', 'Ovelha', 'Panda', 'Pinguim', 'Rato', 'Tartaruga', 'Urso']
+               'Iguana', 'Jacare', 'Leao', 'Macaco', 'Ovelha', 'Panda', 'Pinguim', 'Rato', 'Tartaruga', 'Urso']
 			   
-	cidades = ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Brasília", "Salvador", "Fortaleza", "Recife", "Curitiba",
-	"Porto Alegre", "Manaus", "Belém", "Goiânia", "Vitória", "Natal", "João Pessoa", "Florianópolis", "Cuiabá",
+	cidades = ["Sao Paulo", "Rio de Janeiro", "Belo Horizonte", "Brasilia", "Salvador", "Fortaleza", "Recife", "Curitiba",
+	"Porto Alegre", "Manaus", "Belem", "Goiania", "Vitoria", "Natal", "Joao Pessoa", "Florianopolis", "Cuiaba",
 	"Campo Grande", "Teresina", "Aracaju"]
 	
-	objetos = ['cadeira', 'caneta', 'chave', 'copo', 'relógio', 'telefone', 'óculos', 'livro', 'computador', 'guarda-chuva',
-	'bola', 'sapato', 'garrafa', 'tesoura', 'lápis', 'faca', 'controle remoto', 'carteira', 'chapéu', 'escova de dentes']
+	objetos = ['cadeira', 'caneta', 'chave', 'copo', 'relogio', 'telefone', 'oculos', 'livro', 'computador', 'guarda-chuva',
+	'bola', 'sapato', 'garrafa', 'tesoura', 'lapis', 'faca', 'controle remoto', 'carteira', 'chapeu', 'escova de dentes']
 	if classe == 1:
 		return animais[randint(0, len(animais))]
 	if classe == 2:
@@ -29,7 +25,6 @@ def gerar_Palavra(classe):
 def esconder_Palavra(palavra):
 	'''Esconde as letras de uma palavra. \n (str) -> str'''
 	hide = ""
-	#tamanho = len(palavra)
 	for i in range(0, len(palavra)):
 		if palavra[i] != " ":
 			hide += "_"
@@ -41,11 +36,12 @@ def esconder_Palavra(palavra):
 def verificar_Letra(palavra, letra):
 	'''Verifica se a letra está na palavra. \n (str, str) -> bool'''
 	letra = letra.lower()
-	palavra.lower()
+	palavra = palavra.lower()
 	if letra in palavra:
 		return True
 	else:
 		return False
+	
     
     
 def mostrar_Letra(p_oculta, p_original, letra):
@@ -61,14 +57,18 @@ def mostrar_Letra(p_oculta, p_original, letra):
 			new += p_oculta[i]
 	return new
 
+
 def carregar(chave='CARREGANDO', temp=3):
+	"""Simula um carregamento para causar mais imersão no game"""
 	print(chave)
 	sleep(temp)
 
 
-def quit():
-    carregar('FECHANDO', 4)
-    sys.exit()
+def quit(x):
+	"""Fecha o programa"""
+	if x == "x":
+		carregar('FECHANDO', 4)
+		sys.exit()
 
 
 
