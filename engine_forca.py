@@ -14,11 +14,11 @@ def gerar_Palavra(classe):
 	objetos = ['cadeira', 'caneta', 'chave', 'copo', 'relogio', 'telefone', 'oculos', 'livro', 'computador', 'guarda-chuva',
 	'bola', 'sapato', 'garrafa', 'tesoura', 'lapis', 'faca', 'controle remoto', 'carteira', 'chapeu', 'escova de dentes']
 	if classe == 1:
-		return animais[randint(0, len(animais))]
+		return animais[randint(0, len(animais)-1)]
 	if classe == 2:
-		return cidades[randint(0, len(cidades))]
+		return cidades[randint(0, len(cidades)-1)]
 	if classe == 3:
-		return objetos[randint(0, len(objetos))]
+		return objetos[randint(0, len(objetos)-1)]
 	return None
 
 

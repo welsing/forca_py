@@ -16,5 +16,5 @@ while True:
         carregar()
         wins += start_game(user) 
     else:
-        print("OPÇÃO INVALIDA!")
+        print("OPÇÃO \033[1;31mINVALIDA\033[0;0m!")
         carregar()

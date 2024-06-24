@@ -10,14 +10,14 @@ def start_game(classe):
     while True:
         print("\n"*150)
         if hide.lower() == word.lower():
-            print("PARABÉNS!!!")
+            print("\033[1;33mPARABÉNS!!!\033[0;00m")
             sleep(0.5)
-            print(f"VOCÊ ACERTOU A PALAVRA {hide.upper()}!!!")
+            print(f"VOCÊ \033[1;32mACERTOU\033[0;0m A PALAVRA \033[1;32m{hide.upper()}\033[0;0m!!!")
             sleep(3)
             return 1
         if chances == 0:
             morte()
-            print(f"- Você não conseguiu acertar a palavra {word.upper()}")
+            print(f"- Você não \033[1;31mconseguiu acertar a palavra \033[1;31m{word.upper()}\033[0;0m")
             
             sleep(3)
             return 0
@@ -38,12 +38,12 @@ def menu(wins):
     """Mostra o menu principal no console e retorna a escolha. (int) -> str """
     while True:
         print(f"""｡☆✼★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★✼☆｡
-{f"-+ JOGO DA FORCA +-   VITORIAS: {wins}":>37}\n
+{f"-+ \033[1;92mJOGO DA FORCA\033[0;0m +-   VITORIAS: \033[1;36m{wins}":>37}\033[0;0m\n
 - Selecione a categoria que deseja:
-[1] Animais
-[2] Cidades
-[3] Objetos
-[x] Sair
+[1] \033[1;33mAnimais\033[0;0m
+[2] \033[1;33mCidades\033[0;0m
+[3] \033[1;33mObjetos\033[0;0m
+[x] \033[1;31mSair\033[0;0m
 »»————————————————★————————————————««""")
         select = input("DIGITE: ")
         return select
@@ -55,45 +55,45 @@ def status_do_jogo(chances, hide, erradas):
         ------
         |    |
              |       >>> {hide.capitalize()}   
-             |       {len(hide)+1} letras!
+             |       \033[1;33m{len(hide)+1} letras!\033[0;0m
              |
              |          
-        ------------ Chances Restantes: {chances}
+        ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
         {erradas}             
-Digite 'X' para sair.""",
+        Digite 'X' para \033[1;31msair\033[0;0m.""",
         f"""
 
         ------
         |    |
              O       >>> {hide.capitalize()}   
-             |       {len(hide)+1} letras!
+             |       \033[1;33m{len(hide)+1} letras!\033[0;0m
              |
              |          
-        ------------ Chances Restantes: {chances}
+        ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
         {erradas}
-Digite 'X' para sair.""",
+        Digite 'X' para \033[1;31msair\033[0;0m.""",
         f"""
 
         ------
         |    |
              O       >>> {hide.capitalize()}   
-            /|\\      {len(hide)+1} letras!
+            /|\\      \033[1;33m{len(hide)+1} letras!\033[0;0m
              |
              |          
-        ------------ Chances Restantes: {chances}
+        ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
         {erradas}
-Digite 'X' para sair.""",
+        Digite 'X' para \033[1;31msair\033[0;0m.""",
         f"""
 
         ------
         |    |
              O       >>> {hide.capitalize()}   
-            /|\\      {len(hide)+1} letras!
+            /|\\      \033[1;33m{len(hide)+1} letras!\033[0;0m
              |
             /|\\          
-        ------------ Chances Restantes: {chances}
+        ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
         {erradas}
-        Digite 'X' para sair."""]
+        Digite 'X' para \033[1;31msair\033[0;0m."""]
     if len(erradas) < 3:
         if len(erradas) == 0:
             nn = len(erradas)
