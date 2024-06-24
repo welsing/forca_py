@@ -55,7 +55,7 @@ def status_do_jogo(chances, hide, erradas):
         ------
         |    |
              |       >>> {hide.capitalize()}   
-             |       \033[1;33m{len(hide)+1} letras!\033[0;0m
+             |       \033[1;33m{len(hide)} letras!\033[0;0m
              |
              |          
         ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
@@ -66,7 +66,7 @@ def status_do_jogo(chances, hide, erradas):
         ------
         |    |
              O       >>> {hide.capitalize()}   
-             |       \033[1;33m{len(hide)+1} letras!\033[0;0m
+             |       \033[1;33m{len(hide)} letras!\033[0;0m
              |
              |          
         ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
@@ -77,7 +77,7 @@ def status_do_jogo(chances, hide, erradas):
         ------
         |    |
              O       >>> {hide.capitalize()}   
-            /|\\      \033[1;33m{len(hide)+1} letras!\033[0;0m
+            /|\\      \033[1;33m{len(hide)} letras!\033[0;0m
              |
              |          
         ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m
@@ -88,7 +88,7 @@ def status_do_jogo(chances, hide, erradas):
         ------
         |    |
              O       >>> {hide.capitalize()}   
-            /|\\      \033[1;33m{len(hide)+1} letras!\033[0;0m
+            /|\\      \033[1;33m{len(hide)} letras!\033[0;0m
              |
             /|\\          
         ------------ Chances Restantes: \033[1;31m{chances}\033[0;0m

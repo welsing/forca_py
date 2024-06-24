@@ -43,7 +43,6 @@ def verificar_Letra(palavra, letra):
 		return False
 	
     
-    
 def mostrar_Letra(p_oculta, p_original, letra):
 	'''Insere, caso haja, a letra na palavra oculta. \n (str, str, str) -> str'''
 	p_original = p_original.lower()
@@ -70,6 +69,18 @@ def quit(x):
 		carregar('FECHANDO', 4)
 		sys.exit()
 
+
+## CASOS DE TESTES
+if __name__ == "__main__":
+	print(gerar_Palavra(1))  # -> Uma palavra da categoria animais.
+	print(gerar_Palavra(2))  # -> Uma palavra da categoria cidades.
+	print(gerar_Palavra(3))  # -> Uma palavra da categoria objetos.
+
+	print(esconder_Palavra("teste")) # -> _____
+	print(verificar_Letra("teste", "s")) # -> true
+	print(verificar_Letra("teste", "x")) # -> false
+
+	print(mostrar_Letra("_____", "teste", "e")) # -> _e__e
 
 
 
