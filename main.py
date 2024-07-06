@@ -11,9 +11,9 @@ from interacoes import *
 
 wins = 0
 while True:
-    user = menu(wins)
-    quit(user)
-    if user.strip().lower()[0] in "123":
+    user = menu(wins) # Mostra o menu
+    quit(user)    # Verifica se o usuario quer sair
+    if user.strip().lower()[0] in "1234":        # Verifica se é uma opção valida
         user = int(user)
         carregar()
         wins += start_game(user) 

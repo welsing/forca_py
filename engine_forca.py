@@ -13,12 +13,39 @@ def gerar_Palavra(classe):
 	
 	objetos = ['cadeira', 'caneta', 'chave', 'copo', 'relogio', 'telefone', 'oculos', 'livro', 'computador', 'guarda-chuva',
 	'bola', 'sapato', 'garrafa', 'tesoura', 'lapis', 'faca', 'controle remoto', 'carteira', 'chapeu', 'escova de dentes']
+	
+	hard_mode = [ 
+    "Acender", "Afugentar", "Alardear",
+    "Apatico", "Ardiloso", "Assiduo", "Astucia",
+    "Audacia", "Benevolente", 
+    "Bisbilhotar", "Camaradagem", "Chanceler",
+    "Chistoso", "Conjuge", "Consoante",
+    "Consternacao", "Correlato",
+    "Deleitar-se", "Desdem", "Diligencia",
+    "Discrepancia", "Disseminar", "Dissimulado",
+    "Egocentrico", "Empatia", "Escoria",
+    "Estigma", "Eufemismo", "Eximio",
+    "Extrovertido", "Facao", "Famigerado",
+    "Flagelo", "Flamula", "Genuino",
+    "Heterogeneo", "Impeto",
+    "Impressao", "Insercao",
+    "Lapidar",
+    "Melindrosa", "Nostalgia", 
+    "Paradigma", "Perecivel", "Peremptorio",
+    "Platonico", "Pragmatismo", "Proeminente",
+    "Quimera", "Rancor", "Reciproco",
+    "Sagaz", "Sarcasmo", "Sensatez",
+    "Tacito", "Temperanca", "Tenaz",
+    "Ufanismo", "Visceral" ]
+	
 	if classe == 1:
 		return animais[randint(0, len(animais)-1)]
 	if classe == 2:
 		return cidades[randint(0, len(cidades)-1)]
 	if classe == 3:
 		return objetos[randint(0, len(objetos)-1)]
+	if classe == 4:
+		return hard_mode[randint(0, len(objetos)-1)]
 	return None
 
 
@@ -75,6 +102,7 @@ if __name__ == "__main__":
 	print(gerar_Palavra(1))  # -> Uma palavra da categoria animais.
 	print(gerar_Palavra(2))  # -> Uma palavra da categoria cidades.
 	print(gerar_Palavra(3))  # -> Uma palavra da categoria objetos.
+	print(gerar_Palavra(4))  # -> Uma palavra da categoria hard mode.
 
 	print(esconder_Palavra("teste")) # -> _____
 	print(verificar_Letra("teste", "s")) # -> true

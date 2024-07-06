@@ -43,6 +43,7 @@ def menu(wins):
 [1] \033[1;33mAnimais\033[0;0m
 [2] \033[1;33mCidades\033[0;0m
 [3] \033[1;33mObjetos\033[0;0m
+[4] \033[1;33mMODO HARD\033[0;0m
 [x] \033[1;31mSair\033[0;0m
 »»————————————————★————————————————««""")
         select = input("DIGITE: ")
